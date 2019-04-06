@@ -9,6 +9,9 @@ set backspace=indent,eol,start
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 
+set cc=80
+highlight ColorColumn ctermbg=8 " with hyper and hyper-snazzy, this corresponds to gray
+
 " remove scrollbars
 set guioptions-=r
 set guioptions-=R
@@ -56,9 +59,6 @@ augroup ProjectDrawer
   autocmd BufNewFile * :execute 'Vexplore' | wincmd p
   autocmd BufReadPost * :execute 'Vexplore' | wincmd p
 augroup END
-
-" mark the 81st character of lines that go over 80 characters
-:2mat ErrorMsg '\%81v.'
 
 " disable anything that has to do with the mouse, including scrolling
 set mouse=c
