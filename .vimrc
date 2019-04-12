@@ -1,6 +1,7 @@
 " sporeball's vimrc
 
 " basic stuff
+set nocompatible
 set number
 set ruler
 set hlsearch
