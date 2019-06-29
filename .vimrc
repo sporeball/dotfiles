@@ -1,7 +1,6 @@
 " sporeball's vimrc
 
 " basic stuff
-set nocompatible
 set number
 set ruler
 set hlsearch
@@ -42,6 +41,9 @@ set nobackup
 set nowb
 set noswapfile
 
+" commands
+command Q q|q " shorthand for quitting twice
+
 " return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -60,6 +62,3 @@ augroup ProjectDrawer
   autocmd BufNewFile * :execute 'Vexplore' | wincmd p
   autocmd BufReadPost * :execute 'Vexplore' | wincmd p
 augroup END
-
-" disable anything that has to do with the mouse, including scrolling
-set mouse=c
