@@ -61,4 +61,5 @@ augroup ProjectDrawer
   autocmd!
   autocmd BufNewFile * :execute 'Vexplore' | wincmd p
   autocmd BufReadPost * :execute 'Vexplore' | wincmd p
+  autocmd VimEnter * if &ft is 'netrw' | sil! wincmd w | endif
 augroup END
