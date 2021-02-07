@@ -18,16 +18,6 @@ function get_hostname {
   export SHORTNAME=${HOSTNAME%%.*}
 }
 
-function user_color {
-  id | grep "Admin" > /dev/null
-  RETVAL=$?
-  if [[ $RETVAL == 0 ]]; then
-    usercolor="[0;32m";
-  else
-    usercolor="[0;32m";
-  fi
-}
-
 function settitle() {
   u=${USERNAME}
   h="$u@${HOSTNAME}"
@@ -38,13 +28,16 @@ function settitle() {
 eval `dircolors ~/.dir_colors`
 
 # Set prompt and window title
-inputcolor='[0;37m'
-cwdcolor='[0;34m'
-host_name='[1;31m'
-user_color
+c_red='[0;31m'
+c_grn='[0;32m'
+c_ylw='[0;33m'
+c_blu='[0;34m'
+c_mgt='[0;35m'
+c_cyn='[0;36m'
+c_wht='[0;37m'
 PROMPT_COMMAND='settitle; get_hostname; history -a;'
 
 export PATH=$PATH:~/AppData/Local/hyper/app-2.1.2/resources/bin
 
 cd $HOME
-export PS1='\n\[\e${cwdcolor}\][`echo $PWD | sed -E '"'"'s|/c/Users/[^/]+|~|'"'"'`]\n\[\e${usercolor}\][sporeball]\[\e${host_name}\][${SHORTNAME}]\[\e${inputcolor}\] $ '
+export PS1='\n\[\e${c_mgt}\]sporeball\[\e${c_wht}\]@\[\e${c_grn}\]\H\[\e${c_wht}\]:\[\e${c_blu}\]\w\n\[\e${c_wht}\]$ '
