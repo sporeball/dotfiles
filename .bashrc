@@ -47,4 +47,4 @@ PROMPT_COMMAND='settitle; get_hostname; history -a;'
 export PATH=$PATH:~/AppData/Local/hyper/app-2.1.2/resources/bin
 
 cd $HOME
-export PS1='\n\[\e${cwdcolor}\][`echo $PWD | sed -E '"'"'s|/c/Users/[^/]+|~|'"'"'`]\n\[\e${usercolor}\][\u]\[\e${host_name}\][${SHORTNAME}]\[\e${inputcolor}\] $ '
+export PS1='\n\[\e${cwdcolor}\][`echo $PWD | sed -E '"'"'s|/c/Users/[^/]+|~|'"'"'`]\n\[\e${usercolor}\][sporeball]\[\e${host_name}\][${SHORTNAME}]\[\e${inputcolor}\] $ '
