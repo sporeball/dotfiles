@@ -38,6 +38,7 @@ c_wht='[0;37m'
 PROMPT_COMMAND='settitle; get_hostname; history -a;'
 
 export PATH=$PATH:~/AppData/Local/hyper/app-2.1.2/resources/bin
+export PATH=$PATH:./node_modules/.bin
 
 cd $HOME
 export PS1='\n\[\e${c_mgt}\]sporeball\[\e${c_wht}\]@\[\e${c_grn}\]\H\[\e${c_wht}\]:\[\e${c_blu}\]\w\n\[\e${c_wht}\]$ '
