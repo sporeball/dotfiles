@@ -1,5 +1,6 @@
 alias python='winpty python.exe'
 alias rm=trash
+alias ccat='pygmentize -O style=monokai'
 alias focus='netsh interface set interface "Wi-Fi" disable; echo "internet off. now go!"'
 alias losefocus='netsh interface set interface "Wi-Fi" enable; echo "internet on. use wisely!"'
 
