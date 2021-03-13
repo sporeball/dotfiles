@@ -6,6 +6,9 @@
 #import:
 #  - /path/to/alacritty.yml
 
+env:
+  TERM: alacritty
+
 window:
   # changes to this require a restart
   #dimensions:
@@ -22,7 +25,7 @@ window:
     x: 16
     y: 8
   dynamic_padding: false
-  
+
   # no borders or title bar
   decorations: none
 
@@ -55,11 +58,11 @@ font:
     family: Space Mono
     style: Bold
   size: 10.0
-  
+
   offset:
     x: 0
     y: 0
-    
+
   # location of glyphs within their cells
   #glyph_offset:
   #  x: 0
@@ -123,7 +126,7 @@ background_opacity: 1.0
 selection:
   # all characters used as separators for "semantic words"
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  
+
   save_to_clipboard: false
 
 cursor:
@@ -132,7 +135,7 @@ cursor:
     shape: Block
     # values: never, off, on, always
     blinking: Off
-    
+
   unfocused_hollow: false
 
 live_config_reload: true
