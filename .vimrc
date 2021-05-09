@@ -9,9 +9,6 @@ set backspace=indent,eol,start
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 
-set cc=80
-highlight ColorColumn ctermbg=8 " with hyper and hyper-snazzy, this corresponds to gray
-
 " remove scrollbars
 set guioptions-=r
 set guioptions-=R
@@ -28,6 +25,11 @@ filetype indent on
 
 " auto read when file is changed from the outside
 set autoread
+
+augroup Startup
+  autocmd!
+  autocmd VimEnter * :set shortmess=I
+augroup END
 
 " force all files to use 2 spaces as the indent
 augroup ForceCorrectIndent
@@ -52,7 +54,7 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
-let g:netrw_winsize = 24
+let g:netrw_winsize = 13
 
 " opens netrw in a split to the left of anything else opened, then takes focus away from netrw
 " because of how this works, you should NOT use vim -p on the command line
