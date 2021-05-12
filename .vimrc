@@ -56,9 +56,7 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 13
 
-" opens netrw in a split to the left of anything else opened, then takes focus away from netrw
-" because of how this works, you should NOT use vim -p on the command line
-" instead, just start vim without the p flag, then use :tabnew [file] within vim when you need to open something 
+" opens netrw in a split to the left of anything else opened, then takes focus away from it
 augroup ProjectDrawer
   autocmd!
   autocmd BufNewFile * :execute 'Vexplore' | wincmd p
