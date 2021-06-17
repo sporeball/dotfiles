@@ -23,15 +23,15 @@ window:
   # changes to this require a restart
   padding:
     x: 16
-    y: 16
+    y: 8
   dynamic_padding: false
 
   # no borders or title bar
-  decorations: full
+  decorations: none
 
   # values: windowed, fullscreen, maximized
   # changes to this require a restart
-  startup_mode: Windowed
+  startup_mode: Fullscreen
 
   title: Alacritty
   # allow applications to change the title
@@ -46,18 +46,18 @@ scrolling:
 # font configuration
 font:
   normal:
-    family: Terminus
+    family: Space Mono
     style: Regular
   bold:
-    family: Terminus
+    family: Space Mono
     style: Bold
   italic:
-    family: Terminus
+    family: Space Mono
     style: Regular
   bold_italic:
-    family: Terminus
+    family: Space Mono
     style: Bold
-  size: 12.0
+  size: 10.0
 
   offset:
     x: 0
@@ -121,7 +121,7 @@ bell:
   # will be executed whenever the bell is rung
   command: None
 
-background_opacity: 0.8
+background_opacity: 1.0
 
 selection:
   # all characters used as separators for "semantic words"
@@ -136,14 +136,14 @@ cursor:
     # values: never, off, on, always
     blinking: Off
 
-  unfocused_hollow: true
+  unfocused_hollow: false
 
 live_config_reload: true
 
 shell:
-  program: fish
-  #args:
-  #  - --login
+  program: C:\Program Files\Git\bin\bash
+  args:
+    - --login
 
 # directory the shell starts in
 working_directory: None
