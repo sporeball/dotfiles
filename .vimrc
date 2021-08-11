@@ -41,6 +41,17 @@ highlight Type cterm=italic gui=italic
 filetype plugin on
 filetype indent on
 
+" remaps
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+
 " autocmds
 augroup Startup
   autocmd!
