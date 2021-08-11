@@ -33,6 +33,10 @@ set guioptions-=L
 syntax enable
 set background=dark
 
+" italics
+highlight Comment cterm=italic gui=italic
+highlight Type cterm=italic gui=italic
+
 " filetype plugins
 filetype plugin on
 filetype indent on

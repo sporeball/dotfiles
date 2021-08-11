@@ -46,17 +46,17 @@ scrolling:
 # font configuration
 font:
   normal:
-    family: Terminus
+    family: Fantasque Sans Mono
     style: Regular
   bold:
-    family: Terminus
+    family: Fantasque Sans Mono
     style: Bold
   italic:
-    family: Terminus
-    style: Regular
+    family: Fantasque Sans Mono
+    style: Italic
   bold_italic:
-    family: Terminus
-    style: Bold
+    family: Fantasque Sans Mono
+    style: Bold Italic
   size: 12.0
 
   offset:
