@@ -3,6 +3,7 @@
 " plugins used here:
 " - vim-airline
 " - vim-airline-themes
+" - vim-commentary
 " - vim-javascript
 
 " basic stuff
@@ -51,6 +52,8 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
+
+noremap <silent> <C-_> :Commentary<cr>
 
 " autocmds
 augroup Startup
