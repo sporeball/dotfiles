@@ -180,7 +180,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	font pango:Terminus 12
+	font pango:Fantasque Sans Mono 12
 	colors {
 		background #282a36
 	}
