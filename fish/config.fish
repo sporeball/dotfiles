@@ -6,7 +6,7 @@
 set -x SHELL /usr/bin/fish
 
 alias cat=bat
-alias ls=exa
+alias ls="exa -aL2 --git --no-permissions --no-time --no-user"
 
 function cti -d "move an image from the clipboard to a file"
   xclip -selection clipboard -t image/png -o > $argv
