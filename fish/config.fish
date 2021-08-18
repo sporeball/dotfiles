@@ -26,3 +26,7 @@ function td -d "cd to something in the home directory"
   cd ~
   cd $argv
 end
+
+function v -d "open a file in vim"
+  vim -p $argv
+end
