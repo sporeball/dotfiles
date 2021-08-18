@@ -55,6 +55,8 @@ inoremap <Right> <nop>
 
 noremap <silent> <C-_> :Commentary<cr>
 
+nnoremap <esc><esc> :noh<cr>:<backspace>
+
 " autocmds
 augroup Startup
   autocmd!
