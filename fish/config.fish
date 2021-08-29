@@ -30,3 +30,16 @@ end
 function v -d "open a file in vim"
   vim -p $argv
 end
+
+# pacman shortcuts
+function rs -d "remove a package"
+  sudo pacman -Rs $argv
+end
+
+function s -d "install a package"
+  sudo pacman -S $argv
+end
+
+function syu -d "update all packages"
+  sudo pacman -Syu
+end
