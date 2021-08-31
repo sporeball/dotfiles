@@ -27,8 +27,12 @@ function td -d "cd to something in the home directory"
   cd $argv
 end
 
-function v -d "open a file in vim"
-  vim -p $argv
+function v -d "start vim"
+  if test (count $argv) -eq 0
+    vim -p *.js
+  else
+    vim -p $argv
+  end
 end
 
 # pacman shortcuts
