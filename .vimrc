@@ -48,6 +48,8 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
+nnoremap <backspace> <nop>
+
 inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
