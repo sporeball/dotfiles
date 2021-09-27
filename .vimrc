@@ -49,6 +49,8 @@ noremap <Left> <nop>
 noremap <Right> <nop>
 
 nnoremap <backspace> <nop>
+nnoremap <Space> <nop>
+nnoremap <cr> <nop>
 
 inoremap <Up> <nop>
 inoremap <Down> <nop>
