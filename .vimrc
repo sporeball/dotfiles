@@ -10,7 +10,9 @@
 set number
 set ruler
 set hlsearch
+set incsearch
 set ignorecase
+set smartcase
 set backspace=indent,eol,start
 set noeb vb t_vb=
 set noshowmode
