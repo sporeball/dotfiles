@@ -8,6 +8,18 @@ set -x SHELL /usr/bin/fish
 alias cat=bat
 alias ls="exa -aL2 --git --no-permissions --no-time --no-user"
 
+# helper functions
+function read_confirm
+  read -l -P 'sure? y/n ' confirm
+  switch $confirm
+    case y
+      return 0
+    case '' n
+      return 1
+  end
+end
+
+# basic shortcuts
 function cti -d "move an image from the clipboard to a file"
   xclip -selection clipboard -t image/png -o > $argv
 end
@@ -46,4 +58,37 @@ end
 
 function syu -d "update all packages"
   sudo pacman -Syu
+end
+
+# git shortcuts
+function ga -d "add files to git"
+  if test (count $argv) -eq 0
+    git add .
+  else
+    git add $argv
+  end
+end
+
+function gc -d "commit changes"
+  if test (count $argv) -eq 0
+    git commit
+  else
+    git commit -m $argv
+  end
+end
+
+function gd -d "show changes"
+  if test (count $argv) -eq 0
+    git diff
+  else
+    git diff $argv
+  end
+end
+
+function gp -d "push changes"
+  git push
+end
+
+function gs -d "show status"
+  git status
 end
