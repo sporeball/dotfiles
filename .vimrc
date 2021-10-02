@@ -34,9 +34,10 @@ set guioptions-=L
 syntax enable
 set background=dark
 
-" italics
+" highlight rules
 highlight Comment cterm=italic gui=italic
 highlight Type cterm=italic gui=italic
+highlight MatchParen cterm=italic gui=italic ctermbg=black ctermfg=cyan
 
 " filetype plugins
 filetype plugin on
