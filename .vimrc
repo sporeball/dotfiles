@@ -57,9 +57,9 @@ inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
 
-noremap <silent> <C-_> :Commentary<cr>
-
 nnoremap <esc><esc> :noh<cr>:<backspace>
+noremap <silent> <S-k> :PaneSwap<cr>
+noremap <silent> <C-_> :Commentary<cr>
 
 " autocmds
 augroup Startup
@@ -77,7 +77,11 @@ augroup END
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " commands
-command Q q|q " shorthand for quitting twice
+
+" shorthand for quitting twice
+command Q q|q
+" toggle focus between the main split and netrw
+command PaneSwap if &ft is 'netrw' | :execute "normal \<C-w>l" | else | :execute "normal \<C-w>h" | endif
 
 " netrw settings
 let g:netrw_banner = 0
