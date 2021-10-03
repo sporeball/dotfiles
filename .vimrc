@@ -32,6 +32,10 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
+" fillchars
+set fillchars+=vert:\ 
+set fillchars+=eob:\ 
+
 " syntax and background
 syntax enable
 set background=dark
