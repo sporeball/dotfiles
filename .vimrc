@@ -63,6 +63,10 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
+inoremap <esc>[1;3A <nop>
+inoremap <esc>[1;3B <nop>
+inoremap <esc>[1;3C <nop>
+inoremap <esc>[1;3D <nop>
 
 nnoremap <esc><esc> :noh<cr>:<backspace>
 noremap <silent> <S-k> :PaneSwap<cr>
