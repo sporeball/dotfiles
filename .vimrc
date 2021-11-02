@@ -90,7 +90,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " commands
 
 " shorthand for quitting twice
-command Q q|q
+command Q q!|q!
 " toggle focus between the main split and netrw
 command PaneSwap if &ft is 'netrw' | :execute "normal \<C-w>l" | else | :execute "normal \<C-w>h" | endif
 
