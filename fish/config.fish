@@ -29,6 +29,11 @@ function dcd -d "cd to the contents of a removable volume"
   cd $argv
 end
 
+function mkcd -d "make a new directory, and cd into it"
+  mkdir $argv
+  cd $argv
+end
+
 function re -d "cd to a repo"
   cd ~/Documents/gh
   cd $argv
