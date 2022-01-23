@@ -56,6 +56,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run -fn "Fantasque Sans Mono"
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+# honk!
+bindsym $mod+Shift+h exec --no-startup-id aplay ~/.config/sounds/honk.wav
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
