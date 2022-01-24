@@ -29,6 +29,8 @@ window:
   # no borders or title bar
   decorations: full
 
+  opacity: 0.75
+
   # values: windowed, fullscreen, maximized
   # changes to this require a restart
   startup_mode: Windowed
@@ -120,8 +122,6 @@ bell:
 
   # will be executed whenever the bell is rung
   command: None
-
-background_opacity: 0.8
 
 selection:
   # all characters used as separators for "semantic words"
