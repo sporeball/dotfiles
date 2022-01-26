@@ -72,6 +72,9 @@ nnoremap <esc><esc> :noh<cr>:<backspace>
 noremap <silent> <S-k> :PaneSwap<cr>
 noremap <silent> <C-_> :Commentary<cr>
 
+" disabled commands
+cabbrev tabnew <bs>
+
 " autocmds
 augroup Startup
   autocmd!
