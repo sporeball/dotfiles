@@ -1,6 +1,7 @@
 " sporeball's vimrc
 
 " plugins used here:
+" - NERDTree
 " - vim-airline
 " - vim-airline-themes
 " - vim-commentary
@@ -69,7 +70,7 @@ inoremap <esc>[1;3C <nop>
 inoremap <esc>[1;3D <nop>
 
 nnoremap <esc><esc> :noh<cr>:<backspace>
-noremap <silent> <S-k> :PaneSwap<cr>
+noremap <silent> <C-n> <C-w>w
 noremap <silent> <C-_> :Commentary<cr>
 
 " disabled commands
@@ -90,25 +91,20 @@ augroup END
 " return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" commands
+" NERDTree settings
+let g:NERDTreeWinSize=20
+let g:NERDTreeMinimalUI=1
 
-" shorthand for quitting twice
-command Q q!|q!
-" toggle focus between the main split and netrw
-command PaneSwap if &ft is 'netrw' | :execute "normal \<C-w>l" | else | :execute "normal \<C-w>h" | endif
-
-" netrw settings
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 3
-let g:netrw_altv = 1
-let g:netrw_winsize = 13
-
-" opens netrw in a split to the left of anything else opened, then takes focus away from it
-augroup ProjectDrawer
+augroup Tree
   autocmd!
-  autocmd BufNewFile,BufReadPost * :execute 'Vexplore' | wincmd p
-  autocmd VimEnter * if &ft is 'netrw' | sil! wincmd w | endif
+  " start NERDTree, then focus the other split
+  autocmd VimEnter * NERDTree | wincmd p
+  " use the same NERDTree on every tab
+  autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+  " close a tab if NERDTree is the only remaining split in it
+  autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+  " exit vim if NERDTree is the only remaining split anywhere
+  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 augroup END
 
 " syntax highlighting settings
