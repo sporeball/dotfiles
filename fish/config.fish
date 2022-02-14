@@ -58,6 +58,9 @@ function rs -d "remove a package"
 end
 
 function s -d "install a package"
+  if test (count $argv) -eq 0
+    return 1
+  end
   sudo pacman -S $argv
 end
 
