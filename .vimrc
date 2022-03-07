@@ -6,6 +6,8 @@
 " - vim-airline-themes
 " - vim-commentary
 " - vim-javascript
+" - typescript-vim
+" - coc.nvim, with coc-tsserver installed
 
 " basic stuff
 set number
@@ -17,12 +19,17 @@ set smartcase
 set backspace=indent,eol,start
 set noeb vb t_vb=
 set noshowmode
+set encoding=utf-8
+set hidden
 au GUIEnter * set vb t_vb=
 
 " no backups
 set nobackup
 set nowb
 set noswapfile
+
+set cmdheight=2
+set updatetime=300
 
 " auto read when file is changed from the outside
 set autoread
@@ -45,6 +52,11 @@ set background=dark
 highlight Comment cterm=italic gui=italic
 highlight Type cterm=italic gui=italic
 highlight MatchParen cterm=italic gui=italic ctermbg=black ctermfg=cyan
+highlight Pmenu ctermfg=magenta ctermbg=black
+highlight PmenuSel ctermfg=magenta ctermbg=black
+highlight CocErrorSign guibg=black guifg=red
+highlight CocInfoSign guibg=black
+highlight CocWarningSign guibg=black
 
 " filetype plugins
 filetype plugin on
@@ -68,6 +80,11 @@ inoremap <esc>[1;3A <nop>
 inoremap <esc>[1;3B <nop>
 inoremap <esc>[1;3C <nop>
 inoremap <esc>[1;3D <nop>
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 nnoremap <esc><esc> :noh<cr>:<backspace>
 noremap <silent> <C-n> <C-w>w
