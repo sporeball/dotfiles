@@ -93,6 +93,10 @@ function gd -d "show changes"
   end
 end
 
+function gl -d "show commit log"
+  git log
+end
+
 function gp -d "push changes"
   git push
 end
