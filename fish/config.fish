@@ -6,7 +6,8 @@
 set -x SHELL /usr/bin/fish
 
 alias cat=bat
-alias ls="exa -aL2 --git --no-permissions --no-time --no-user"
+alias ls="exa -a --group-directories-first"
+alias la="ls -l --git --no-permissions --no-time --no-user"
 
 # helper functions
 function read_confirm
