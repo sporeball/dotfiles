@@ -54,6 +54,10 @@ function v -d "start vim"
 end
 
 # pacman shortcuts
+function qi -d "query for a package"
+  sudo pacman -Qi $argv
+end
+
 function rs -d "remove a package"
   sudo pacman -Rs $argv
 end
