@@ -1,7 +1,6 @@
 " sporeball's vimrc
 
 " plugins used here:
-" - NERDTree
 " - vim-airline
 " - vim-airline-themes
 " - vim-commentary
@@ -90,9 +89,6 @@ nnoremap <esc><esc> :noh<cr>:<backspace>
 noremap <silent> <C-n> <C-w>w
 noremap <silent> <C-_> :Commentary<cr>
 
-" disabled commands
-cabbrev tabnew <bs>
-
 " autocmds
 augroup Startup
   autocmd!
@@ -107,22 +103,6 @@ augroup END
 
 " return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" NERDTree settings
-let g:NERDTreeWinSize=20
-let g:NERDTreeMinimalUI=1
-
-augroup Tree
-  autocmd!
-  " start NERDTree, then focus the other split
-  autocmd VimEnter * NERDTree | wincmd p
-  " use the same NERDTree on every tab
-  autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-  " close a tab if NERDTree is the only remaining split in it
-  autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-  " exit vim if NERDTree is the only remaining split anywhere
-  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-augroup END
 
 " syntax highlighting settings
 let g:javascript_plugin_jsdoc = 1
