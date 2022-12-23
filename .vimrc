@@ -20,6 +20,7 @@ set noeb vb t_vb=
 set noshowmode
 set encoding=utf-8
 set hidden
+set t_Co=256
 au GUIEnter * set vb t_vb=
 
 " no backups
@@ -48,6 +49,9 @@ syntax enable
 set background=dark
 
 " highlight rules
+highlight Number ctermfg=213
+highlight String ctermfg=156
+highlight jsTemplateString ctermfg=228
 highlight Comment cterm=italic gui=italic
 highlight Type cterm=italic gui=italic
 highlight MatchParen cterm=italic gui=italic ctermbg=black ctermfg=cyan
