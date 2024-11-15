@@ -1,0 +1,103 @@
+# sporeball's alacritty config
+# (as used at Hack Club HQ in 2024)
+# to be updated
+
+# additional config files
+# imports are loaded in order, with this file being loaded last
+# must be either absolute with / or relative to ~
+#import:
+#  - /path/to/alacritty.yml
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+  padding.x = 16
+  padding.y = 16
+  dynamic_padding = false
+
+  # no borders or title bar
+  decorations = "full"
+
+  opacity = 0.75
+
+  # values: windowed, fullscreen, maximized
+  # changes to this require a restart
+  startup_mode = "Windowed"
+
+  title = "Alacritty"
+  # allow applications to change the title
+  dynamic_title = true
+
+[scrolling]
+  history = 10000
+  multiplier = 1
+
+# font configuration
+# font:
+#  normal:
+#    family: Fantasque Sans Mono
+#    style: Regular
+#  bold:
+#    family: Fantasque Sans Mono
+#    style: Bold
+#  italic:
+#    family: Fantasque Sans Mono
+#    style: Italic
+#  bold_italic:
+#    family: Fantasque Sans Mono
+#    style: Bold Italic
+#  size: 12.0
+
+#  offset:
+#    x: 0
+#    y: 0
+
+# draw_bold_text_with_bright_colors = false
+
+[colors]
+  primary.background = '#282a36'
+  primary.foreground = '#eff0eb'
+  cursor.text = "CellBackground"
+  cursor.cursor = "CellForeground"
+  selection.text = "CellBackground"
+  selection.background = "CellForeground"
+  normal.black = '#282a36'
+  normal.red = '#ff5c57'
+  normal.green = '#5af78e'
+  normal.yellow = '#f3f99d'
+  normal.blue = '#57c7ff'
+  normal.magenta = '#ff6ac1'
+  normal.cyan = '#9aedfe'
+  normal.white = '#f1f1f0'
+  bright.black = '#686868'
+  bright.red = '#ff5c57'
+  bright.green = '#5af78e'
+  bright.yellow = '#f3f99d'
+  bright.blue = '#57c7ff'
+  bright.magenta = '#ff6ac1'
+  bright.cyan = '#9aedfe'
+  bright.white = '#eff0eb'
+
+[cursor]
+  style.shape = "Block"
+  style.blinking = "Off"
+  unfocused_hollow = true
+
+# live_config_reload = true
+
+# [shell]
+  # program: fish
+  #args:
+  #  - --login
+
+# directory the shell starts in
+# working_directory: None
+
+# send ESC before characters when alt is pressed
+# alt_send_esc: true
+
+# mouse:
+#   double_click: { threshold: 300 }
+#   triple_click: { threshold: 300 }
+#   hide_when_typing: false
