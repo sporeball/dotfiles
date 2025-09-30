@@ -1,4 +1,4 @@
-<sub>[`ringo`](ringo) &larr; [**`queen`**](queen) &rarr; xxx</sub>
+<sub>[`ringo`](/ringo) &larr; [**`queen`**](/queen) &rarr; xxx</sub>
 
 ## queen
 

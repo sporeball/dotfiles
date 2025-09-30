@@ -1,4 +1,4 @@
-<sub>[`gohan`](gohan) &larr; [**`ringo`**](ringo) &rarr; [`queen`](queen)</sub>
+<sub>[`gohan`](/gohan) &larr; [**`ringo`**](/ringo) &rarr; [`queen`](/queen)</sub>
 
 ## ringo
 
