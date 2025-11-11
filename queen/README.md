@@ -10,4 +10,15 @@ in the fall of 2025, after leaving our role at [Hack Club](https://hackclub.com)
 **WM:** Hyprland\
 **terminal:** foot\
 **shell:** bash\
-**editor:** Neovim
+**editor:** Helix
+
+---
+
+while this machine runs Omarchy, a significant effort has been made to divorce it from many of the distro's core tenets: many large or unnecessary packages have been removed, several of Omarchy's scripts have been edited, and its updates and menu are hidden, effectively locking the distro in place at version 3.1.7.
+
+the dotfiles in this folder require the following additional packages:
+- [`godot`](https://archlinux.org/packages/extra/x86_64/godot/)
+- [`oxygen-cursors`](https://aur.archlinux.org/packages/oxygen-cursors) (AUR)
+- [`wl-color-picker`](https://aur.archlinux.org/packages/wl-color-picker) (AUR)
+
+additionally, the Waybar configuration makes mention of `arvelie`, a script based on a version of [arvelie.tal](https://git.sr.ht/~rabbits/uxn-utils/tree/main/item/cli/arvelie/arvelie.tal) where year zero is instead marked by `#07e9` (2025).
