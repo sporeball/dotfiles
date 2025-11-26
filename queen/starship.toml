@@ -4,11 +4,12 @@ format = "[${custom.venv}$directory$git_branch$git_status]($style)$character"
 
 [character]
 error_symbol = "[λ](bold red)"
-success_symbol = "[λ](bold green)"
+success_symbol = "[λ](bold fg:231)"
 
 [directory]
 truncation_length = 1
 truncation_symbol = ""
+style = "bold fg:195"
 repo_root_style = "bold fg:183"
 repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 

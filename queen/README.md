@@ -18,7 +18,9 @@ while this machine runs Omarchy, a significant effort has been made to divorce i
 
 the dotfiles in this folder require the following additional packages:
 - [`godot`](https://archlinux.org/packages/extra/x86_64/godot/)
+- [`lf`](https://archlinux.org/packages/extra/x86_64/lf/)
+- [`rofi`](https://archlinux.org/packages/extra/x86_64/rofi/)
+- [`sox`](https://archlinux.org/packages/extra/x86_64/sox/)
 - [`oxygen-cursors`](https://aur.archlinux.org/packages/oxygen-cursors) (AUR)
-- [`wl-color-picker`](https://aur.archlinux.org/packages/wl-color-picker) (AUR)
 
 additionally, the Waybar configuration makes mention of `arvelie`, a script based on a version of [arvelie.tal](https://git.sr.ht/~rabbits/uxn-utils/tree/main/item/cli/arvelie/arvelie.tal) where year zero is instead marked by `#07e9` (2025).
