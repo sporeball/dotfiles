@@ -1,4 +1,5 @@
-@import "../omarchy/current/theme/waybar.css";
+@define-color foreground #eeeeee;
+@define-color background #000000;
 
 * {
   background-color: @background;
