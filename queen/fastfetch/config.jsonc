@@ -1,0 +1,114 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/faceless.txt",
+    "color": { "1": "white" },
+    "padding": {
+      "top": 1,
+      "right": 0,
+      "left": 0
+    }
+  },
+  "display": {
+    "separator": "  "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[32m  lux@queen"
+    },
+    {
+      "type": "host",
+      "key": "",
+      "keyColor": "green",
+      "format": "{family}"
+    },
+    {
+      "type": "cpu",
+      "key": "",
+      "keyColor": "green",
+      "format": "{name} @ {freq-max}"
+    },
+    {
+      "type": "gpu",
+      "key": "",
+      "keyColor": "green",
+      "format": "{vendor} {name}",
+      "detectionMethod": "pci",
+    },
+    {
+      "type": "display",
+      "key": "󱄄",
+      "keyColor": "green",
+      "format": "{width}x{height} @ {scale-factor}x ({inch}\")"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊",
+      "keyColor": "green"
+    },
+    {
+      "type": "memory",
+      "key": "",
+      "keyColor": "green"
+    },
+    {
+      "type": "swap",
+      "key": "󰓡",
+      "keyColor": "green"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[34m  Omarchy 3.1.7"
+    },
+    {
+      "type": "kernel",
+      "key": "",
+      "keyColor": "blue",
+      "format": "Linux {release}"
+    },
+    {
+      "type": "wm",
+      "key": "",
+      "keyColor": "blue",
+      "format": "{process-name} {version} \u001b"
+    },
+    {
+      "type": "terminal",
+      "key": "",
+      "keyColor": "blue",
+      "format": "{process-name} {version} \u001b[38m●\u001b[37m●\u001b[36m●\u001b[35m●\u001b[34m●\u001b[33m●\u001b[32m●\u001b[31m●"
+    },
+    {
+      "type": "packages",
+      "key": "󰏖",
+      "keyColor": "blue",
+      "format": "{pacman}"
+    },
+    {
+      "type": "terminalfont",
+      "key": "",
+      "keyColor": "blue",
+      "format": "{name} ({size}px)"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+    }
+  ]
+}
