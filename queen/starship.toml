@@ -3,8 +3,8 @@ command_timeout = 200
 format = "[${custom.venv}$directory$git_branch$git_status]($style)$character"
 
 [character]
-error_symbol = "[λ](bold red)"
-success_symbol = "[λ](bold fg:231)"
+error_symbol = "[](bold red)"
+success_symbol = "[](bold fg:231)"
 
 [directory]
 truncation_length = 1
