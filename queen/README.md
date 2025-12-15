@@ -16,9 +16,9 @@ in the fall of 2025, after leaving our role at [Hack Club](https://hackclub.com)
 
 while this machine runs Omarchy, a significant effort has been made to divorce it from many of the distro's core tenets: many large or unnecessary packages have been removed, several of Omarchy's scripts have been edited, and its updates and menu are hidden, effectively locking the distro in place at version 3.1.7.
 
-the dotfiles in this folder require the following additional packages:
-- [`godot`](https://archlinux.org/packages/extra/x86_64/godot/)
-- [`rofi`](https://archlinux.org/packages/extra/x86_64/rofi/)
+the Hyprland configuration requires the following packages that Omarchy doesn't vouch for:
+- [`links`](https://archlinux.org/packages/core/x86_64/links/)
+- [`prismlauncher`](https://archlinux.org/packages/extra/x86_64/prismlauncher/)
 - [`sox`](https://archlinux.org/packages/extra/x86_64/sox/)
 - [`oxygen-cursors`](https://aur.archlinux.org/packages/oxygen-cursors) (AUR)
 
