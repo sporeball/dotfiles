@@ -5,11 +5,11 @@
   "spacing": 0,
   "height": 32,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["custom/clock", "custom/screenrecording-indicator"],
+  "modules-center": ["custom/clock"],
   "modules-right": [
-    "bluetooth",
     "network",
     "pulseaudio",
+    "bluetooth",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -17,7 +17,7 @@
     "format": "{icon}",
     "format-icons": {
       "default": "",
-      "1": "1",
+      "1": "",
       "2": "2",
       "3": "3",
       "4": "4",
@@ -39,30 +39,27 @@
     "tooltip": false,
   },
   "network": {
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "󰀂",
-    "format-disconnected": "󰤮",
+    "format-ethernet": "󰀂 ",
+    "format-disconnected": "󰤮 ",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "spacing": 1,
     "on-click": "foot -T impala -e impala"
   },
   "battery": {
     "format": "{capacity}% {icon}",
-    "format-discharging": "{icon}",
-    "format-charging": "{icon}",
     "format-plugged": "",
     "format-icons": {
       "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "tooltip-format-discharging": "{power:>1.0f}W↓",
+    "tooltip-format-charging": "{power:>1.0f}W↑",
     "interval": 5,
     "states": {
       "warning": 20,
@@ -73,7 +70,7 @@
     "format": "",
     "format-disabled": "󰂲",
     "format-connected": "",
-    "tooltip-format": "Devices connected: {num_connections}",
+    "tooltip-format": "{num_connections} connections",
     "on-click": "omarchy-launch-bluetooth"
   },
   "pulseaudio": {
@@ -84,15 +81,5 @@
     "format-icons": {
       "default": ["", "", ""]
     }
-  },
-  "custom/screenrecording-indicator": {
-    "on-click": "omarchy-cmd-screenrecord",
-    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
-    "signal": 8,
-    "return-type": "json"
-  },
-  "tray": {
-    "icon-size": 12,
-    "spacing": 17
   }
 }
